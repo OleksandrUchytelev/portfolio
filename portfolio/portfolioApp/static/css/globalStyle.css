@@ -1,0 +1,21 @@
+/* .desktop {
+    display: none;
+  }
+.mobile {
+    display: none;
+} */
+
+
+/* Медиа запрос для десктопных устройств
+@media only screen and (min-width: 769px) {
+  .desktop{
+    display: block;
+  }
+} */
+
+/* Медиа запрос для мобильных устройств */
+/* @media only screen and (max-width: 768px) {
+  .mobile {
+    display: block;
+  }
+} */
