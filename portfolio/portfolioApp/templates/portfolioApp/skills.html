@@ -11,6 +11,8 @@
 </head>
 <body>
     <script type="module" src="{% static 'js/firebase.js' %}"></script>
+    <script type="module" src="{% static 'js/jsAnimation.js' %}"></script>
+
     <div class="desktop">
         <div class="pageContainer">         
             <div id="secondContainer"   class="secondColumn firstRow MainColumn">
@@ -94,25 +96,72 @@
                         <td>
                             <h2 id="ProgLanguageBlockName">Name</h2>
                         </td>
-                        <td>
+                        <td class="langLevel">
                             <h2 id="ProgLanguageBlockLevel">Level</h2>
                         </td>
                     </tr>
                     {% for language in programming_languages %}
-                    <tr>
-                        <td>
-                            {{ language.icon.svg_content|safe }}
-                        </td>
-                        <td>
-                            <div class="circle-container">
-                                {% for _ in 'x'|rjust:language.level %}
-                                    <div class="circle">
-                                        <div class="inner-circle-{{ forloop.counter }}"></div>
-                                    </div>
-                                {% endfor %}
-                            </div>
-                        </td>
-                    </tr>
+                        {% if language.name == "HTML" %}
+                        <tr>
+                            <td>
+                                {{ language.icon.svg_content|safe }}
+                            </td>
+                            <td class="htmlSkillStyle">
+                                <div class="circle-container">
+                                    {% for _ in 'x'|rjust:language.level %}
+                                        <div class="circle">
+                                            <div class="inner-circle-{{ forloop.counter }}"></div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </td>
+                        </tr>
+                        {% elif language.name == "CSS" %}
+                        <tr>
+                            <td>
+                                {{ language.icon.svg_content|safe }}
+                            </td>
+                            <td class="langLevel">
+                                <div class="circle-container">
+                                    {% for _ in 'x'|rjust:language.level %}
+                                        <div class="circle">
+                                            <div class="inner-circle-css-{{ forloop.counter }}"></div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </td>
+                        </tr>
+                        {% elif language.name == "JavaScript" %}
+                        <tr>
+                            <td>
+                                {{ language.icon.svg_content|safe }}
+                            </td>
+                            <td class="langLevel">
+                                <div id="jsSkill" class="circle-container jsSkill">
+                                    {% for _ in 'x'|rjust:language.level %}
+                                        <div class="circle">
+                                            <div class="inner-circle-{{ forloop.counter }}"></div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </td>
+                        </tr>
+                        {% else %}
+                        <tr>
+                            <td>
+                                {{ language.icon.svg_content|safe }}
+                            </td>
+                            <td class="langLevel">
+                                <div class="circle-container">
+                                    {% for _ in 'x'|rjust:language.level %}
+                                        <div class="circle">
+                                            <div class="inner-circle-{{ forloop.counter }}"></div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </td>
+                        </tr>
+                        {% endif %}
                     {% endfor %}
                 </table>
             </div>
@@ -123,7 +172,7 @@
                         <td>
                             <h2 id="ProgLanguageBlockName">Name</h2>
                         </td>
-                        <td>
+                        <td class="langLevel">
                             <h2 id="ProgLanguageBlockLevel">Level</h2>
                         </td>
                     </tr>
@@ -132,7 +181,7 @@
                         <td>
                             {{ technologie.icon.svg_content|safe }}
                         </td>
-                        <td>
+                        <td class="langLevel">
                             <div class="circle-container">
                                 {% for _ in 'x'|rjust:technologie.level %}
                                     <div class="circle">
@@ -147,6 +196,10 @@
             </div>
         </div>
         <div class="bottomBarContainer" id="bottomBar">
+            <div class="item">Uchytelev Alex</div>
+            <div class="item">Uchytelev Alex</div>
+            <div class="item">Uchytelev Alex</div>
+            <div class="item">Uchytelev Alex</div>
             <div class="item">Uchytelev Alex</div>
         </div>
     </div>
@@ -233,25 +286,72 @@
                         <td>
                             <h2 id="ProgLanguageBlockName">Name</h2>
                         </td>
-                        <td>
+                        <td class="langLevel">
                             <h2 id="ProgLanguageBlockLevel">Level</h2>
                         </td>
                     </tr>
                     {% for language in programming_languages %}
-                    <tr>
-                        <td>
-                            {{ language.icon.svg_content|safe }}
-                        </td>
-                        <td>
-                            <div class="circle-container">
-                                {% for _ in 'x'|rjust:language.level %}
-                                    <div class="circle">
-                                        <div class="inner-circle-{{ forloop.counter }}"></div>
-                                    </div>
-                                {% endfor %}
-                            </div>
-                        </td>
-                    </tr>
+                        {% if language.name == "HTML" %}
+                        <tr>
+                            <td>
+                                {{ language.icon.svg_content|safe }}
+                            </td>
+                            <td class="htmlSkillStyle">
+                                <div class="circle-container">
+                                    {% for _ in 'x'|rjust:language.level %}
+                                        <div class="circle">
+                                            <div class="inner-circle-{{ forloop.counter }}"></div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </td>
+                        </tr>
+                        {% elif language.name == "CSS" %}
+                        <tr>
+                            <td>
+                                {{ language.icon.svg_content|safe }}
+                            </td>
+                            <td class="langLevel">
+                                <div class="circle-container">
+                                    {% for _ in 'x'|rjust:language.level %}
+                                        <div class="circle">
+                                            <div class="inner-circle-css-{{ forloop.counter }}"></div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </td>
+                        </tr>
+                        {% elif language.name == "JavaScript" %}
+                        <tr>
+                            <td>
+                                {{ language.icon.svg_content|safe }}
+                            </td>
+                            <td class="langLevel">
+                                <div id="jsSkill" class="circle-container jsSkill">
+                                    {% for _ in 'x'|rjust:language.level %}
+                                        <div class="circle">
+                                            <div class="inner-circle-{{ forloop.counter }}"></div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </td>
+                        </tr>
+                        {% else %}
+                        <tr>
+                            <td>
+                                {{ language.icon.svg_content|safe }}
+                            </td>
+                            <td class="langLevel">
+                                <div class="circle-container">
+                                    {% for _ in 'x'|rjust:language.level %}
+                                        <div class="circle">
+                                            <div class="inner-circle-{{ forloop.counter }}"></div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </td>
+                        </tr>
+                        {% endif %}
                     {% endfor %}
                 </table>
             </div>
@@ -262,7 +362,7 @@
                         <td>
                             <h2 id="ProgLanguageBlockName">Name</h2>
                         </td>
-                        <td>
+                        <td class="langLevel">
                             <h2 id="ProgLanguageBlockLevel">Level</h2>
                         </td>
                     </tr>
@@ -271,7 +371,7 @@
                         <td>
                             {{ technologie.icon.svg_content|safe }}
                         </td>
-                        <td>
+                        <td class="langLevel">
                             <div class="circle-container">
                                 {% for _ in 'x'|rjust:technologie.level %}
                                     <div class="circle">
@@ -286,6 +386,10 @@
             </div>
         </div>
         <div class="bottomBarContainer" id="bottomBar">
+            <div class="item">Uchytelev Alex</div>
+            <div class="item">Uchytelev Alex</div>
+            <div class="item">Uchytelev Alex</div>
+            <div class="item">Uchytelev Alex</div>
             <div class="item">Uchytelev Alex</div>
         </div>
     </div>

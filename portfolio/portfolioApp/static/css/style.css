@@ -122,7 +122,7 @@ a {
       }
 #LanguageBlockTable {
   height: 0px;
-  width:  311px;
+  width:  438px;
   align-items: center;
 }
 #LanguageBlockMain {
@@ -489,4 +489,76 @@ a {
 }
 .ProgLanguageBlockMobile{
   margin-top: 30px;
+}
+.langLevel{
+  padding-left: 15px;
+}
+.htmlSkillStyle {
+  position: absolute;
+  left: 80px; 
+}
+.inner-circle-css-1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px; /* Размер поменьшего круга */
+  height: 40px; /* Размер поменьшего круга */
+  border-radius: 50%;
+  background-color: hsl(240, 1%, 30%); /* Зеленый цвет */
+}
+.inner-circle-css-2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-55%, -55%);
+  width: 12px; /* Размер поменьшего круга */
+  height: 12px; /* Размер поменьшего круга */
+  border-radius: 50%;
+  background-color: hsl(240, 1%, 30%); /* Зеленый цвет */
+}
+.inner-circle-css-3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-54%, -53%);
+  width: 22px; /* Размер поменьшего круга */
+  height: 22px; /* Размер поменьшего круга */
+  border-radius: 50%;
+  background-color: hsl(240, 1%, 30%); /* Зеленый цвет */
+}
+.inner-circle-css-4 {
+  position: absolute;
+  top: 60%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: 45px; /* Размер поменьшего круга */
+  height: 45px; /* Размер поменьшего круга */
+  border-radius: 50%;
+  background-color: hsl(240, 1%, 30%); /* Зеленый цвет */
+}
+.inner-circle-css-5 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 33px; /* Размер поменьшего круга */
+  height: 33px; /* Размер поменьшего круга */
+  border-radius: 50%;
+  background-color: hsl(240, 1%, 30%); /* Зеленый цвет */
+}
+.jsSkill {
+  position: relative;
+  animation: moveLeftRight 2s linear infinite;
+}
+@keyframes moveLeftRight {
+  0% {
+      transform: translateX(0);
+  }
+  50% {
+      transform: translateX(50px);
+  }
+  100% {
+      transform: translateX(0);
+  }
 }
