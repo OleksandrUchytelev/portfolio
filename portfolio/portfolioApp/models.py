@@ -51,7 +51,7 @@ class PortfolioBlock(models.Model):
     tech_stack = models.CharField(max_length=255, verbose_name="Tech Stack")
     about = models.TextField(verbose_name="About")
     key_responsibilities = models.TextField(verbose_name="Key Responsibilities")
-    images = models.ImageField(upload_to='portfolio_images/', verbose_name="Images", blank=True, null=True)
+    images = models.ImageField(upload_to='media/portfolio_images/', verbose_name="Images", blank=True, null=True)
     project_link = models.URLField(max_length=200, verbose_name="Project Link", blank=True, null=True)
 
     def __str__(self):
@@ -64,7 +64,7 @@ class ArticleBlock(models.Model):
     summary = models.TextField(verbose_name="Summary")
     about_article = models.TextField(verbose_name="About Article")
     article_text = models.TextField(verbose_name="Article Text")
-    images = models.ImageField(upload_to='article_images/', verbose_name="Article Images", blank=True, null=True)
+    images = models.ImageField(upload_to='media/article_images/', verbose_name="Article Images", blank=True, null=True)
 
     def __str__(self):
         return self.title

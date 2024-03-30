@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
       desktopContent.style.display = 'none';
       mobileContent.style.display = 'block';
-      mobileContent.style.width = '100%';
+      mobileContent.style.width = 'fit-content';
       mobileContent.style.height = 'auto';
     }
   }

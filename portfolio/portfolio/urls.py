@@ -2,6 +2,8 @@ from django.contrib import admin
 from django.urls import path
 from portfolioApp import views
 from django.views.generic import RedirectView
+from django.conf import settings
+from django.conf.urls.static import static
 
 
 handler404 = 'portfolioApp.views.handle_404'
@@ -14,4 +16,4 @@ urlpatterns = [
     path('skills/', views.skills_view, name='skills'),
     path('projects/', views.projects_view, name='projects'),
     path('career/', views.career_view, name='career'),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

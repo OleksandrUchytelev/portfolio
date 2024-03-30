@@ -152,7 +152,7 @@ a {
   margin-right: 10px; /* Для горизонтальной линии кружков */
   margin-bottom: 10px; /* Для вертикальной линии кружков */
 }
-.inner-circle-one {
+.inner-circle-1 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -162,7 +162,7 @@ a {
   border-radius: 50%;
   background-color: #3502FF; /* Зеленый цвет */
 }
-.inner-circle-two {
+.inner-circle-2 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -172,7 +172,7 @@ a {
   border-radius: 50%;
   background-color: #8C31FF; /* Зеленый цвет */
 }
-.inner-circle-three {
+.inner-circle-3 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -182,7 +182,7 @@ a {
   border-radius: 50%;
   background-color: #00B707; /* Зеленый цвет */
 }
-.inner-circle-four {
+.inner-circle-4 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -192,7 +192,7 @@ a {
   border-radius: 50%;
   background-color: #FF8B03; /* Зеленый цвет */
 }
-.inner-circle-five {
+.inner-circle-5 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -205,7 +205,7 @@ a {
 
 #ProgLanguageBlockTable {
   height: 0px;
-  width:  427px;
+  width:  auto;
 }
 #ProgLanguageBlockMain {
   text-align: center;
@@ -215,16 +215,14 @@ a {
   align-items: flex-start;
 }
 #ProgLanguageBlockLevel {
-  text-align: right; 
-  align-items: flex-end;
+  text-align: left; 
 }
 .PortfolioBlock {
-  grid-column: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 430px;
-  height: auto;
+  height: max-content;
   font-family: 'Itim', sans-serif;
   border: 1px solid #000000;
   text-align: center;
@@ -316,12 +314,12 @@ a {
 .ArticleBlockSecondText{
   text-align:start;
   align-items: start;
-  margin: 0px 0px 12px 28px
+  margin: 0px 12px 12px 28px
 }
 .ArticleBlockText{
   text-align:start;
   align-items: start;
-  padding: 0px 0px 12px 28px
+  padding: 0px 12px 12px 28px
 }
 
 .CareerBlock {
@@ -329,7 +327,7 @@ a {
   flex-direction: column;
   align-items: center;
   width: 430px;
-  height: auto;
+  height: max-content;
   font-family: 'Itim', sans-serif;
   border: 1px solid #000000;
   text-align: center;
@@ -393,7 +391,6 @@ a {
     gap: 20px; /* Промежуток между столбцами */
     padding-top: 25px;
     padding-bottom: 100px;
-
 }
 .pageContainerMobile {
   display: grid;
@@ -462,7 +459,7 @@ a {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: auto;
+  height: max-content;
   font-family: 'Itim', sans-serif;
   border: 1px solid #000000;
   text-align: center;
@@ -470,4 +467,26 @@ a {
   font-size: 24px;
   position: relative; 
   margin-top: 25px;
+}
+.ArticleBlockMobile {
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 430px;
+  height: max-content;
+  font-family: 'Itim', sans-serif;
+  border: 1px solid #000000;
+  text-align: center;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  font-size: 24px;
+  position: relative; 
+  margin-top: 25px;
+}
+.articleImage {
+  width: 400px;
+  height: auto;
+}
+.ProgLanguageBlockMobile{
+  margin-top: 30px;
 }

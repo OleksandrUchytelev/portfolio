@@ -5,20 +5,17 @@ from django.http import JsonResponse
 
 def career_view(request):
     companies = Company.objects.all()
-    svgImages = ModelWithSVG.objects.all()
-    return render(request, 'portfolioApp/career.html', {'companies': companies, 'svgImages': svgImages })
+    return render(request, 'portfolioApp/career.html', {'companies': companies})
 
 def projects_view(request):
     projects = PortfolioBlock.objects.all()
-    svgImages = ModelWithSVG.objects.all()
-    return render(request, 'portfolioApp/projects.html', {'projects': projects, 'svgImages': svgImages })
+    return render(request, 'portfolioApp/projects.html', {'projects': projects})
 
 def skills_view(request):
     languages = Language.objects.all()
     programming_languages = ProgrammingLanguage.objects.all()
     technologies = Technologies.objects.all()
-    svgImages = ModelWithSVG.objects.all()
-    return render(request, 'portfolioApp/skills.html', {'languages': languages, 'programming_languages': programming_languages, 'technologies': technologies, 'svgImages': svgImages })
+    return render(request, 'portfolioApp/skills.html', {'languages': languages, 'programming_languages': programming_languages, 'technologies': technologies})
 
 def articles_view(request):
     articles = ArticleBlock.objects.all()
