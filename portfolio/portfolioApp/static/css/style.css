@@ -89,7 +89,7 @@ a {
         white-space: nowrap;
         overflow: hidden;
 } */
-.container {
+.bottomBarContainer {
         display: flex;
         flex-direction: row;
         padding: 15px; 

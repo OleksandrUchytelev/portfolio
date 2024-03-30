@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Itim&display=swap">
     <link href="{% static 'css/style.css' %}" rel="stylesheet" />
     <link href="{% static 'css/globalStyle.css' %}" rel="stylesheet" />
-
     <script src="{% static 'js/scripts.js' %}"></script>
 </head>
 <body>
+    <script type="module" src="{% static 'js/firebase.js' %}"></script>
     <div class="desktop">
         <div class="pageContainer">
             {% for company in companies %}
@@ -216,14 +216,9 @@
                 </div>
         
             </div> -->
-        <div class="container">
-            <div class="item">Uchytelev Alex</div>
-            <div class="item">Uchytelev Alex</div>
-            <div class="item">Uchytelev Alex</div>
-            <div class="item">Uchytelev Alex</div>
-            <div class="item">Uchytelev Alex</div>
-            <div class="item">Uchytelev Alex</div>
-        </div>
+            <div class="bottomBarContainer" id="bottomBar">
+                <div class="item">Uchytelev Alex</div>
+            </div>
         </div>
     </div>
     <div class="mobile">
@@ -324,9 +319,7 @@
                 </div> 
             </div>
         </div>
-        <div class="container">
-            <div class="item">Uchytelev Alex</div>
-            <div class="item">Uchytelev Alex</div>
+        <div class="bottomBarContainer" id="bottomBar">
             <div class="item">Uchytelev Alex</div>
         </div>
     </div> 

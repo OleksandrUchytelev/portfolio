@@ -72,3 +72,17 @@ document.addEventListener('DOMContentLoaded', function() {
   toggleContent();
   window.addEventListener('resize', toggleContent);
 });
+
+window.onload = function() {
+    const bottomBar = document.getElementById("bottomBar");
+    const itemWidth = bottomBar.querySelector(".item").offsetWidth;
+    const containerWidth = bottomBar.offsetWidth;
+
+    const itemsPerRow = Math.floor(containerWidth / itemWidth);
+    const itemsToDuplicate = itemsPerRow - (bottomBar.children.length % itemsPerRow);
+
+    for (let i = 0; i < itemsToDuplicate; i++) {
+        const itemClone = bottomBar.querySelector(".item").cloneNode(true);
+        bottomBar.appendChild(itemClone);
+    }
+};
